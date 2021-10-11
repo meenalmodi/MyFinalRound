@@ -5,7 +5,7 @@ import com.example.mychannels.Model.CancelResponse
 import com.example.mychannels.Model.Channels
 import javax.inject.Inject
 
-class ApiServiceImp @Inject constructor(private val apiServiceImp: ApiServiceImp) {
+class ApiServiceImp @Inject constructor(private val apiServiceImp: ApiService) {
 
      suspend fun getChannelResponse(): Channels = apiServiceImp.getChannelResponse()
 
