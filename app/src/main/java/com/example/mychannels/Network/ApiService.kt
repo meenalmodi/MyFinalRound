@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface ApiService {
     @GET("/programs?channel_number=1")
-    suspend fun getProgramChannel(): List<Channels>
+    suspend fun getProgramChannel(): Channels
 
     @POST("/recording?channel_number=1&program_id=1234")
     suspend fun cancelResponse(): CancelResponse
