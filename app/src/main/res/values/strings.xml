@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Channels</string>
+    <string name="channel_duration">Channel Duration</string>
+    <string name="recording">Recording</string>
+    <string name="cancel">Cancel</string>
+    <string name="channel_title">Channel Title</string>
+    <string name="channel_Session">Channel Session</string>
 </resources>

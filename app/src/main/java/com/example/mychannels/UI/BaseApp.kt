@@ -1,4 +1,4 @@
-package com.example.mychannels.Container
+package com.example.mychannels.UI
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
