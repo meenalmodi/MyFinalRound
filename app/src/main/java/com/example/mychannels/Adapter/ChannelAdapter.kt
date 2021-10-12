@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mychannels.Model.Channels
 import com.example.mychannels.R
 import com.example.mychannels.ViewModel.ChannelViewModel
+import kotlinx.android.synthetic.main.recycleview_channels.view.*
 
 class ChannelAdapter(private val context: Context,private val channels:ArrayList<Channels>)
     :RecyclerView.Adapter<ChannelAdapter.MyChannelViewHolder>() {
@@ -28,7 +29,7 @@ class ChannelAdapter(private val context: Context,private val channels:ArrayList
         holder.Channel_Session.text = post.startTime.toString()
         holder.toggleButton.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener{CompoundButton,ischecked->
             if (ischecked){
-                channelViewModel.gerRecordingResponse()
+                channelViewModel.getRecordingResponse()
                 Toast.makeText(context,"The video is recording",Toast.LENGTH_LONG).show()
             } else{
                 channelViewModel.getCancelResponse()

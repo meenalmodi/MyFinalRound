@@ -10,8 +10,6 @@ import com.example.mychannels.Model.CancelResponse
 import com.example.mychannels.Model.Channels
 import com.example.mychannels.Repository.ChannelRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -31,6 +29,7 @@ class ChannelViewModel @Inject constructor(private val channelRepository: Channe
                     ChannelLiveData.value = response
                 }
         }
+    }
 
         fun getCancelResponse() {
             viewModelScope.launch {
@@ -44,8 +43,7 @@ class ChannelViewModel @Inject constructor(private val channelRepository: Channe
             }
         }
 
-
-        fun gerRecordingResponse() {
+        fun getRecordingResponse() {
             viewModelScope.launch {
                 channelRepository.getRecordingResponse()
                     .catch { e ->
@@ -54,7 +52,7 @@ class ChannelViewModel @Inject constructor(private val channelRepository: Channe
                         ResposeLiveData.value = response
                     }
             }
-        }
+
     }
 }
 
